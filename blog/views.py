@@ -30,7 +30,7 @@ def blog_detail(request, pk):
         if form.is_valid():
             comment = Comment(
                 author=form.cleaned_data["author"],
-                body=form.cleaned_data["body"]
+                body=form.cleaned_data["body"],
                 post=post
             )
             comment.save
